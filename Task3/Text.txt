@@ -1,0 +1,4 @@
+Humans have long been masters of dexterity, a skill that can largely be credited to the help of our eyes.
+ Robots, meanwhile, are still catching up.
+ Certainly there's been some progress: for decades robots in controlled environments 
+ like assembly lines have been able to pick up the same object over and over again.
