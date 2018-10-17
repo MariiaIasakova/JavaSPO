@@ -4,41 +4,42 @@ import java.util.Scanner;
 
 public class Calculator {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-		  Scanner input = new Scanner(System.in);
+        Maths maths = new Maths();
 
-		    Maths Maths = new Maths();
+        while (true) {
+            System.out.print("Enter 1st number: ");
+            double inputA = input.nextDouble();
 
-		    double answer = 0;
-		    double inputA, inputB;
-		    char operator;
-		    boolean done = false;
+            System.out.print("Enter 2d number: ");
+            double inputB = input.nextDouble();
 
-		     while (done == false) {
-		        System.out.print("Please enter your sum: ");
+            System.out.print("Enter operation: ");
+            char operator = input.next().charAt(0);
 
-		        inputA = input.nextDouble();
-		        operator = input.next().charAt(0);
-		        inputB = input.nextDouble();        
+            double answer = calculate(maths, inputA, inputB, operator);
 
-		        switch (operator) {
-		            case '+': answer = Maths.add(inputA, inputB);
-		                      break;
-		            case '-': answer = Maths.subtract(inputA, inputB);
-		                      break;
-		            case '*': answer = Maths.multiply(inputA, inputB);
-		                      break;
-		            case '/': answer = Maths.divide(inputA, inputB);
-		                      break;
-		            case '^': answer = Maths.power(inputA, inputB);
-		                      break;
-		        }
+            System.out.println(String.format("%.1f %s %.1f = %.2f", inputA, operator, inputB, answer));
+        }
+    }
 
-		            System.out.println(answer); 
-		     }
-		     
-		     input.close();
-	}
-	
+    private static double calculate(Maths maths, double inputA, double inputB, char operator) {
+        switch (operator) {
+            case '+':
+                return maths.add(inputA, inputB);
+            case '-':
+                return maths.subtract(inputA, inputB);
+            case '*':
+                return maths.multiply(inputA, inputB);
+            case '/':
+                return maths.divide(inputA, inputB);
+            case '^':
+                return maths.power(inputA, inputB);
+            default:
+                    throw new UnsupportedOperationException();
+        }
+    }
+
 }

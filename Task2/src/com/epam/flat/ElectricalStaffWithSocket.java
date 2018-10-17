@@ -1,6 +1,6 @@
 package com.epam.flat;
 
-public abstract class ElectricalStaffWithSocket extends ElecticalStaff {
+public abstract class ElectricalStaffWithSocket extends ElectricalStaff {
 	
 	public ElectricalStaffWithSocket(String name, double valuePower) {
 		super(name, valuePower);

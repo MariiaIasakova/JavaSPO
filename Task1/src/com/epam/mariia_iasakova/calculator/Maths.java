@@ -3,33 +3,22 @@ package com.epam.mariia_iasakova.calculator;
 public class Maths {
 
     double add(double a, double b) {
-        double answer = a+b;
-        return answer;          
+        return a + b;
     }
 
     double subtract(double a, double b) {
-        double answer = a-b;
-        return answer;          
+        return a - b;
     }
 
     double multiply(double a, double b) {
-        double answer = a*b;
-        return answer;          
+        return a * b;
     }
 
     double divide(double a, double b) {
-        double answer = a/b;
-        return answer;          
+        return a / b;
     }
 
-    double power(double a, double b){
-        double answer =a;
-
-        for (int x=2; x<=b; x++){
-            answer *= a;
-        }
-
-        return answer;
+    double power(double a, double b) {
+        return Math.pow(a, b);
     }
-
 }

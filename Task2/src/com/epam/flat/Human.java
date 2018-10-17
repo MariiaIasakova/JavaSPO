@@ -1,6 +1,8 @@
 package com.epam.flat;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Human {
 	public String name;
@@ -9,47 +11,39 @@ public class Human {
 		this.name = name;
 	}
 	
-	public void activateStuff(ElecticalStaff staff) {
-		System.out.println(name + " turn on the " + staff.name);
+	public void activateStuff(ElectricalStaff staff) {
+		System.out.println(name + " turn on the " + staff.getName());
 		staff.Activate();
 	}
 
-	public ArrayList<ElecticalStaff> sortStaffs (ArrayList<ElecticalStaff> staffList) {
+	public List<ElectricalStaff> sortStaffs (ArrayList<ElectricalStaff> staffList) {
 		
-		ElecticalStaff[] staffArray = staffList.toArray(new ElecticalStaff[staffList.size()]);
+		ElectricalStaff[] staffArray = staffList.toArray(new ElectricalStaff[staffList.size()]);
 		
 		 for (int i = 0; i < staffArray.length; i++) {
-
-			 ElecticalStaff min = staffArray[i];
+			 ElectricalStaff min = staffArray[i];
 		        int min_i = i; 
 		        for (int j = i+1; j < staffArray.length; j++) {
-		            if (staffArray[j].valuePower < min.valuePower) {
+		            if (staffArray[j].getValuePower() < min.getValuePower()) {
 		                min = staffArray[j];
 		                min_i = j;
 		            }
 		        }
 		        if (i != min_i) {
-		        	ElecticalStaff tmp = staffArray[i];
+		        	ElectricalStaff tmp = staffArray[i];
 		            staffArray[i] = staffArray[min_i];
 		            staffArray[min_i] = tmp;
 		        }
 		     }
-		 
-		ArrayList<ElecticalStaff> newStaffList = new ArrayList<ElecticalStaff>();
-		for (ElecticalStaff electicalStaff : staffArray) {
-			newStaffList.add(electicalStaff);
-		}
-		return newStaffList;
+		return new ArrayList<>(Arrays.asList(staffArray));
 	}
 	
-	public ArrayList<ElecticalStaff> seachStaff (ArrayList<ElecticalStaff> stuffList, double minValue, double maxValue){
-		
-		ElecticalStaff[] stuffArray = stuffList.toArray(new ElecticalStaff[stuffList.size()]);
-		ArrayList<ElecticalStaff> newArray = new ArrayList<ElecticalStaff>();
+	public ArrayList<ElectricalStaff> searchStaff(ArrayList<ElectricalStaff> stuffList, double minValue, double maxValue){
+		ElectricalStaff[] stuffArray = stuffList.toArray(new ElectricalStaff[stuffList.size()]);
+		ArrayList<ElectricalStaff> newArray = new ArrayList<>();
 		
 		for (int i=1; i < stuffArray.length; i++) {
-			
-			if (stuffArray[i].valuePower < maxValue & stuffArray[i].valuePower > minValue) {
+			if (stuffArray[i].getValuePower() < maxValue && stuffArray[i].getValuePower() > minValue) {
 				newArray.add(stuffArray[i]);
 			}
 		}

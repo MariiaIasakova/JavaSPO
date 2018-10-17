@@ -39,10 +39,10 @@ public class ServiceMethodsForStrings {
 		{
 			lengthStr += str1.length();
 		}
-		int avarageStr = lengthStr / arrayStrings.length;
+		int averageStr = lengthStr / arrayStrings.length;
 		for (String str1 :  arrayStrings)
 		{
-			if (str1.length() > avarageStr)
+			if (str1.length() > averageStr)
 			{
 				System.out.println(str1 + " " + str1.length());
 			}
@@ -54,10 +54,10 @@ public class ServiceMethodsForStrings {
 		for (String str1 :  arrayStrings){
 			lengthStr += str1.length();
 		}
-		int avarageStr = lengthStr / arrayStrings.length;
+		int averageStr = lengthStr / arrayStrings.length;
 		for (String str1 :  arrayStrings)
 		{
-			if (str1.length() < avarageStr)
+			if (str1.length() < averageStr)
 			{
 				System.out.println(str1 + " " + str1.length());
 			}
