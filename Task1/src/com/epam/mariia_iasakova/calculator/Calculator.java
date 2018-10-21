@@ -15,7 +15,7 @@ public class Calculator {
 		    char operator;
 		    boolean done = false;
 
-		     while (done == false) {
+		     while (!done) {
 		        System.out.print("Please enter your sum: ");
 
 		        inputA = input.nextDouble();

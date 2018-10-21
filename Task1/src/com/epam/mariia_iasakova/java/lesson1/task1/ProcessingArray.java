@@ -12,7 +12,7 @@ public class ProcessingArray {
 		 */
 		ServiceMethodsForArrays ServiceClassForArray = new ServiceMethodsForArrays();
 		int orgArray[] = ServiceClassForArray.generationArray();
-		ServiceClassForArray.printArray(orgArray);
+		ServiceClassForArray.printArray(orgArray);		
 		int maxNegativeElement = ServiceClassForArray.seachMaxNegativeElement(orgArray);
 		int minPositiveElement = ServiceClassForArray.seachMinElement(orgArray);
 		int changeArray[] = ServiceClassForArray.replaceElement(orgArray, maxNegativeElement, minPositiveElement);
@@ -33,9 +33,9 @@ public class ProcessingArray {
 		 */
 		ServiceMethodsForStrings ServiceClassForStrings = new ServiceMethodsForStrings();
 		scanner = new Scanner(System.in);
-		int NumberLines = scanner.nextInt();
-		String[] arrayStrings = new String[NumberLines];		
-		for (int i = 0; i < NumberLines; i++)
+		int numberLines = scanner.nextInt();
+		String[] arrayStrings = new String[numberLines];		
+		for (int i = 0; i < numberLines; i++)
 		{
 			arrayStrings[i] = scanner.nextLine();
 		}

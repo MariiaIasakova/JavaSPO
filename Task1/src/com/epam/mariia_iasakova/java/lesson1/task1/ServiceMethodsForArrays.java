@@ -5,11 +5,11 @@ import java.util.*;
 public class ServiceMethodsForArrays {
 
 	public int[] generationArray() {
-		int[] Array = new int[20];
-		for (int j = 0; j < Array.length; j++) {
-			Array[j] = -10 + (int) (Math.random() * 20);
+		int[] array = new int[20];
+		for (int j = 0; j < array.length; j++) {
+			array[j] = -10 + (int) (Math.random() * 20);
 		}
-		return Array;
+		return array;
 	}
 	
 	public void printArray(int[] array){
