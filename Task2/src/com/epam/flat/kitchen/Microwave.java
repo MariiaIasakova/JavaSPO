@@ -8,8 +8,8 @@ public class Microwave extends ElectricalStaffWithSocket{
 		super(name, valuePower);
 	}
 	
-	  public void ActivateInternal() {
-		  System.out.println("Microwave " + name + " turn on."); 
+	  public void activateInternal() {
+		  System.out.println("Microwave " + getName() + " turn on."); 
 	  }
 	
 }

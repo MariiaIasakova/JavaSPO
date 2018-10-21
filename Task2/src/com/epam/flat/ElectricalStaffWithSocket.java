@@ -1,16 +1,16 @@
 package com.epam.flat;
 
-public abstract class ElectricalStaffWithSocket extends ElecticalStaff {
+public abstract class ElectricalStaffWithSocket extends ElectricalStaff {
 	
 	public ElectricalStaffWithSocket(String name, double valuePower) {
 		super(name, valuePower);
 	}
 	
-	public void Activate(){
+	public void activate(){
 		System.out.println("Turn on the socket.");
-		ActivateInternal();
+		activateInternal();
 	}
 		
-	protected abstract void ActivateInternal();
+	protected abstract void activateInternal();
 	
 }

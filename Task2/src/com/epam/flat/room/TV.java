@@ -8,7 +8,7 @@ public class TV extends ElectricalStaffWithSocket{
 		super(name, valuePower);
 	}
 
-	public void ActivateInternal() {
-		  System.out.println("TV " + name + " turn on."); 
+	public void activateInternal() {
+		  System.out.println("TV " + getName() + " turn on."); 
 	  }
 }

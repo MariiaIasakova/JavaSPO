@@ -8,8 +8,8 @@ public class Hairdryer extends ElectricalStaffWithSocket {
 		super(name, valuePower);
 	}
 	
-	public void ActivateInternal() {
-		  System.out.println("Hairdryer " + name + " turn on."); 
+	public void activateInternal() {
+		  System.out.println("Hairdryer " + getName() + " turn on."); 
 	  }
 
 }

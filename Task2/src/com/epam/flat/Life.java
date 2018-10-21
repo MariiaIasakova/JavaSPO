@@ -1,6 +1,7 @@
 package com.epam.flat;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.epam.flat.bathroom.*;
 import com.epam.flat.kitchen.*;
@@ -10,44 +11,44 @@ public class Life {
 	
 	public static void main(String[] args) {
 		
-		Human Masha = new Human("Masha");
+		Human masha = new Human("Masha");
 		
-		ArrayList<ElecticalStaff> staffList = new ArrayList<ElecticalStaff>(); 
+		ArrayList<ElectricalStaff> staffList = new ArrayList<ElectricalStaff>(); 
 		ElectricalClock elClock = new ElectricalClock("Swatch", 0.15);
-		Masha.activateStuff(elClock);
+		masha.activateStuff(elClock);
 		staffList.add(elClock);
 		Hairdryer hairdryer = new Hairdryer("Raventa", 1.7);
-		Masha.activateStuff(hairdryer);
+		masha.activateStuff(hairdryer);
 		staffList.add(hairdryer);
 		Trimmer trimmer = new Trimmer("Revlon", 1.2);
-		Masha.activateStuff(trimmer);
+		masha.activateStuff(trimmer);
 		staffList.add(trimmer);
-		CoffeeMashine coffeeMashine = new CoffeeMashine("Bosh", 1.6);
-		Masha.activateStuff(coffeeMashine);
+		CoffeeMachine coffeeMashine = new CoffeeMachine("Bosh", 1.6);
+		masha.activateStuff(coffeeMashine);
 		staffList.add(coffeeMashine);
 		Microwave microwave = new Microwave("Dewoo", 2.3);
-		Masha.activateStuff(microwave);
+		masha.activateStuff(microwave);
 		staffList.add(microwave);
 		BraLight bra = new BraLight("Edison", 1.4);
-		Masha.activateStuff(bra);
+		masha.activateStuff(bra);
 		staffList.add(bra);
 		TV tv = new TV("Sumsung", 3.8);
-		Masha.activateStuff(tv);
+		masha.activateStuff(tv);
 		staffList.add(tv);
 		
-		ArrayList<ElecticalStaff> choosenArray = Masha.seachStaff(staffList, 0.8, 2);
+		List<ElectricalStaff> choosenArray = masha.searchStaff(staffList, 0.8, 2);
 		System.out.println();
-		System.out.println("Staffs in rangefrom 0.8 to 2:");
+		System.out.println("Staffs in range from 0.8 to 2:");
 		PrintList(choosenArray);
 		System.out.println();
-		ArrayList<ElecticalStaff> newStaffList = Masha.sortStaffs(staffList);
+		List<ElectricalStaff> newStaffList = masha.sortStaffs(staffList);
 		System.out.println("Sort staffs:");
 		PrintList(newStaffList);
 	}
 	
-	private static void PrintList(ArrayList<ElecticalStaff> staffList) {
-		for (ElecticalStaff electicalStaff : staffList) {
-			System.out.println(electicalStaff.name + " " + electicalStaff.valuePower);
+	private static void PrintList(List<ElectricalStaff> staffList) {
+		for (ElectricalStaff electricalStaff : staffList) {
+			System.out.println(electricalStaff.toString());
 		}
 	}
 
