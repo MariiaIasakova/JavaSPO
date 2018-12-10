@@ -36,16 +36,7 @@ public class MainProgram {
         	String[] words = split(getProperty("splitPatternWords"), splitLines[i]);
         	wordsInSentence.put(splitLines[i], words.length);
 		}
-/*        Map<String, Integer> occurrences = new HashMap<String, Integer>();
-         for ( String word : splitWords ) {
-        	String lowerWord = word.toLowerCase();
-            Integer oldCount = occurrences.get(lowerWord);
-            if ( oldCount == null ) {
-               oldCount = 0;
-            }
-            occurrences.put(lowerWord, oldCount + 1);
-         }  
-*/
+
         int stringLength = 10;
          for (Map.Entry entry : wordsInSentence.entrySet()) {
         	    System.out.println(entry.getKey().toString().substring(0,stringLength) + " "
